@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Open Data for Us",
+    "section": "",
+    "text": "This project focuses on identifying data biases, particularly in under-represented communities like women and queer folks, by finding datasets across various fields—from healthcare to urban design and making them as open.\nThis initiative will develop a resource library of datasets that can expose biases, offer workflows for wrangling and cleaning data, and ultimately aim to create an interactive platform to host and explore these datasets. By surfacing biases in existing data, we can foster more equitable decision-making and policy development globally.\nThis project started at the first OceaniaR hackathon"
+  },
+  {
+    "objectID": "unpaid-labour.html",
+    "href": "unpaid-labour.html",
+    "title": "Case study: Unpaid Labour in Australia",
+    "section": "",
+    "text": "Unpaid labor includes essential tasks like:\n\nhousework\ncaregiving\nvolunteering\n\nThese tasks sustains households and communities but are often unrecognized. Women disproportionately bear the burden of unpaid labor, limiting their participation in the paid workforce and contributing to gender inequality. This imbalance affects women’s economic security and career opportunities, while the value of unpaid work remains largely invisible in traditional economic measures. Recognizing and addressing unpaid labor is key to achieving gender equity and a more inclusive economy."
+  },
+  {
+    "objectID": "unpaid-labour.html#problem",
+    "href": "unpaid-labour.html#problem",
+    "title": "Case study: Unpaid Labour in Australia",
+    "section": "",
+    "text": "Unpaid labor includes essential tasks like:\n\nhousework\ncaregiving\nvolunteering\n\nThese tasks sustains households and communities but are often unrecognized. Women disproportionately bear the burden of unpaid labor, limiting their participation in the paid workforce and contributing to gender inequality. This imbalance affects women’s economic security and career opportunities, while the value of unpaid work remains largely invisible in traditional economic measures. Recognizing and addressing unpaid labor is key to achieving gender equity and a more inclusive economy."
+  },
+  {
+    "objectID": "unpaid-labour.html#data-source",
+    "href": "unpaid-labour.html#data-source",
+    "title": "Case study: Unpaid Labour in Australia",
+    "section": "Data source",
+    "text": "Data source\nWe are using data from the Australian Bureau of Statistics from the 2021 Census"
+  },
+  {
+    "objectID": "unpaid-labour.html#aims",
+    "href": "unpaid-labour.html#aims",
+    "title": "Case study: Unpaid Labour in Australia",
+    "section": "Aims",
+    "text": "Aims\nHere we are compiling data that are across several excel spreadsheets and putting them into one tidy, long table format"
+  },
+  {
+    "objectID": "unpaid-labour.html#explore",
+    "href": "unpaid-labour.html#explore",
+    "title": "Case study: Unpaid Labour in Australia",
+    "section": "Explore",
+    "text": "Explore"
+  },
+  {
+    "objectID": "unpaid-labour.html#download",
+    "href": "unpaid-labour.html#download",
+    "title": "Case study: Unpaid Labour in Australia",
+    "section": "Download",
+    "text": "Download\n Download Tidy Data (Table 3 + 7) \n Download Tidy Data (Table 8)"
+  },
+  {
+    "objectID": "unpaid-labour.html#contributors",
+    "href": "unpaid-labour.html#contributors",
+    "title": "Case study: Unpaid Labour in Australia",
+    "section": "Contributors:",
+    "text": "Contributors:\n\n@Fannychini\n@IrinaVKuznetsova\n@olivier-mnr\n@PranihaReddy\n@togaraikoti\n@fontikar\n@njtierney"
+  }
+]

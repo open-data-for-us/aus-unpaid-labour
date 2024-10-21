@@ -1,0 +1,52 @@
+---
+title: "Case study: Unpaid Labour in Australia"
+---
+
+```{r, include=FALSE}
+pacman::p_load(DT, readr)
+
+tab3_7 <-read_csv("output/tables_03_07.csv")
+```
+
+
+## Problem
+
+Unpaid labor includes essential tasks like:
+
+- housework
+- caregiving
+- volunteering
+
+These tasks sustains households and communities but are often unrecognized. Women disproportionately bear the burden of unpaid labor, limiting their participation in the paid workforce and contributing to gender inequality. This imbalance affects women's economic security and career opportunities, while the value of unpaid work remains largely invisible in traditional economic measures. Recognizing and addressing unpaid labor is key to achieving gender equity and a more inclusive economy.
+
+## Data source
+
+We are using data from the [Australian Bureau of Statistics from the 2021 Census](https://www.abs.gov.au/census/guide-census-data/census-dictionary/2021/variables-topic/unpaid-work-and-care/unpaid-domestic-work-number-hours-domp)
+
+## Aims
+
+Here we are compiling data that are across several excel spreadsheets and putting them into one tidy, long table format
+
+## Explore 
+
+```{r, echo=FALSE}
+DT::datatable(tab3_7)
+```
+
+## Download
+
+{{< downloadthis output/tables_03_07.csv dname="2021-ABS-unpaid-labour-table_03_07.csv" label="Download Tidy Data (Table 3 + 7)">}}
+
+{{< downloadthis output/table_8_results.csv dname="2021-ABS-unpaid-labour-table_08.csv" label="Download Tidy Data (Table 8)">}}
+
+
+## Contributors: 
+
+- [@Fannychini](https://github.com/Fannychini)
+- [@IrinaVKuznetsova](https://github.com/IrinaVKuznetsova)
+- [@olivier-mnr](https://github.com/olivier-mnr)
+- [@PranihaReddy](https://github.com/PranihaReddy)
+- [@togaraikoti](https://github.com/togaraikoti)
+- [@fontikar](https://github.com/fontikar)
+- [@njtierney](https://github.com/njtierney/)
+

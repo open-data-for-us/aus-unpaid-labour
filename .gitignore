@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+website/_site/
+/.quarto/
+/_site/
+data/~*

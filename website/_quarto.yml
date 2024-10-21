@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+    
+website:
+  title: "Open Data for Us"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: unpaid-labour.qmd
+        text: Unpaid Labour
+      
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: source
+

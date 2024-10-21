@@ -65,8 +65,16 @@ number_of_hours <- read_excel(path = file_name,
 number_of_hours_cleaned<- number_of_hours[-1,]
 
 # Column bind the two subtables into main table 03
+
 table_07 <- cbind(unpaid_hours_cleaned, number_of_hours_cleaned) %>%
   relocate(sex, .before = unpaid_hours)
+
+table_03 <- cbind(relationship, unpaid_hours) %>%
+  relocate(sex, .before = relationship) %>%
+  # remove the rows containing total data
+  filter(!(str_detect(relationship, "Total")))
+
+
 
 ## Next steps: 
 # 1) Remove the total rows? the total column? 
@@ -78,7 +86,33 @@ table_07 <- cbind(unpaid_hours_cleaned, number_of_hours_cleaned) %>%
 table_07_cleaned <- table_07 %>%
   filter(!unpaid_hours %in% c("Total males", "Total females", "Total persons"))
 
-# View cleaned table
-head(table_07_cleaned)
+
+#### Table 07 ----
+# Name and data from rows: table 07 = relationship
+relationship <- read_excel(path = file_name,
+                           range = "Table 7!A9:A44",
+                           col_names = "relationship") %>%
+  drop_na()
+
+
+# Name and data from other columns: table 07 = 
+unpaid_hours <- read_excel(path = file_name,
+                           range = "Table 7!B10:G44",
+                           col_names = c("nil_hours",
+                                         "less_5_hours",
+                                         "5_to_14_hours",
+                                         "15_to_29_hours",
+                                         "more_30_hours",
+                                         "total")) %>%
+  filter(!is.na(nil_hours)) %>% # to keep the gender information
+  mutate(sex = ifelse(nil_hours %in% c('MALES', 'FEMALES', 'PERSONS'), nil_hours, NA)) %>%
+  fill(sex, .direction = c("down")) %>%
+  filter(!nil_hours %in% c('MALES', 'FEMALES', 'PERSONS'))
+
+
+# Column bind the two subtables into main table 03
+table_03 <- cbind(relationship, unpaid_hours) %>%
+  relocate(sex, .before = relationship)
+
 
 
