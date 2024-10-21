@@ -1,0 +1,76 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+# Read in dependencies
+
+```{r}
+# install.packages("pacman")
+
+pacman::p_load(here, readxl, tidyverse)
+```
+
+```{r}
+```
+
+
+```{r}
+assistance <- read_excel(here("data/Unpaid work and care data summary - first and second release.xlsx"),range = "Table 8!A10:A34", col_names = "Assistance") %>%
+drop_na()
+```
+
+```{r}
+# Name and data from other columns: table 03 = 
+unpaid_hours <- read_excel(here("data/Unpaid work and care data summary - first and second release.xlsx"),range = "Table 8!B12:K34",
+  col_names = c("none",
+                "1_15_hours",
+                "16_to_24_hours",
+                "25_to_34_hours",
+                "35_to_39_hours",
+                "40_hours",
+                "41_to_48_hours",
+                "49_hours_over",
+                "not_stated",
+                "total")) %>%
+  filter(!is.na(none)) %>% # to keep the gender information
+  mutate(sex = ifelse(none %in% c('MALES', 'FEMALES', 'PERSONS'), none, NA)) %>%
+  fill(sex, .direction = c("down")) %>%
+  filter(!none %in% c('MALES', 'FEMALES', 'PERSONS'))
+```
+
+```{r}
+# Column bind the two sub-tables into main table 08
+table_08 <- cbind(assistance, unpaid_hours)
+#  relocate(sex, .before = assistance)
+
+
+## Next steps: 
+# 1) Remove the total rows? the total column? 
+# 2) Table 03 and 07 are similar, i.e. they both report on the number of unpaid work,
+#    however, table 03 uses this data in columns, while table 07 uses it as rows; so 
+#    so perhaps we should transpose and have the table 03 transposed?
+
+```
+
+```{r}
+# remove rows we don't need
+# create a vector with the names we want to remove
+remove_vec = c("Total males", "Total females", "Total persons")
+table_08_clean = table_08[!table_08$Assistance==remove_vec,]
+```
+```{r}
+write_csv(
+  table_08_clean,
+  "table_8_results.csv",
+  na = "NA",
+  append = FALSE,
+  col_names = TRUE,
+  quote = c("needed", "all", "none"),
+  escape = c("double", "backslash", "none"),
+  eol = "\n",
+  num_threads = readr_threads(),
+  progress = show_progress(),
+)
+```
+
