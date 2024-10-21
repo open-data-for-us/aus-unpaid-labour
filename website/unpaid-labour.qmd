@@ -1,0 +1,31 @@
+---
+title: "Case study: Unpaid Labour in Australia"
+---
+
+## Problem
+
+Unpaid labor includes essential tasks like:
+
+- housework
+- caregiving
+- volunteering
+
+These tasks sustains households and communities but are often unrecognized. Women disproportionately bear the burden of unpaid labor, limiting their participation in the paid workforce and contributing to gender inequality. This imbalance affects women's economic security and career opportunities, while the value of unpaid work remains largely invisible in traditional economic measures. Recognizing and addressing unpaid labor is key to achieving gender equity and a more inclusive economy.
+
+## Data source
+
+We are using data from the [Australian Bureau of Statistics from the 2021 Census](https://www.abs.gov.au/census/guide-census-data/census-dictionary/2021/variables-topic/unpaid-work-and-care/unpaid-domestic-work-number-hours-domp)
+
+## Aims
+
+Here we are compiling data that are across several excel spreadsheets and putting them into one tidy, long table format
+
+### Overview of Data
+
+
+## Explore 
+
+
+## Download
+
+
