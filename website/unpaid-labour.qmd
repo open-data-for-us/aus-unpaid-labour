@@ -35,7 +35,7 @@ DT::datatable(tab3_7)
 
 ## Download
 
-{{< downloadthis output/penguins.csv dname="2021-ABS-unpaid-labour-table_03_07.csv" label="Download Table 3 + 7">}}
+{{< downloadthis output/tables_03_07.csv dname="2021-ABS-unpaid-labour-table_03_07.csv" label="Download Table Tidied Data">}}
 
 
 ## Contributors: 
