@@ -2,6 +2,13 @@
 title: "Case study: Unpaid Labour in Australia"
 ---
 
+```{r, include=FALSE}
+pacman::p_load(DT, palmerpenguins, readr)
+
+write_csv(penguins, "output/penguins.csv")
+```
+
+
 ## Problem
 
 Unpaid labor includes essential tasks like:
@@ -25,7 +32,21 @@ Here we are compiling data that are across several excel spreadsheets and puttin
 
 ## Explore 
 
+```{r}
+DT::datatable(penguins)
+```
 
 ## Download
 
+{{< downloadthis output/penguins.csv dname="2021-ABS-unpaid-labour.csv" label="Download Data">}}
+
+
+## Contributors: 
+
+- [@Fannychini](https://github.com/Fannychini)
+- [@IrinaVKuznetsova](https://github.com/IrinaVKuznetsova)
+- [@olivier-mnr](https://github.com/olivier-mnr)
+- [@PranihaReddy](https://github.com/PranihaReddy)
+- [@togaraikoti](https://github.com/togaraikoti)
+- [@fontikar](https://github.com/fontikar)
 
