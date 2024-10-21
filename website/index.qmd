@@ -2,8 +2,10 @@
 title: "Open Data for Us"
 ---
 
-This project focuses on identifying data biases, particularly in under-represented communities like women and queer folks, by finding datasets across various fields—from healthcare to urban design and making them as open. 
+This project focuses on identifying data biases, particularly in under-represented communities like women and queer folks, by finding datasets across various fields—from healthcare to urban design and making them as open.
 
 This initiative will develop a resource library of datasets that can expose biases, offer workflows for wrangling and cleaning data, and ultimately aim to create an interactive platform to host and explore these datasets. By surfacing biases in existing data, we can foster more equitable decision-making and policy development globally.
 
 This project started at the first OceaniaR hackathon
+
+![](banner.png){width="60%" fig-align="center"}
