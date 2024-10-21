@@ -32,21 +32,21 @@
     "href": "unpaid-labour.html#aims",
     "title": "Case study: Unpaid Labour in Australia",
     "section": "Aims",
-    "text": "Aims\nHere we are compiling data that are across several excel spreadsheets and putting them into one tidy, long table format\n\nOverview of Data"
+    "text": "Aims\nHere we are compiling data that are across several excel spreadsheets and putting them into one tidy, long table format"
   },
   {
     "objectID": "unpaid-labour.html#explore",
     "href": "unpaid-labour.html#explore",
     "title": "Case study: Unpaid Labour in Australia",
     "section": "Explore",
-    "text": "Explore\n\nDT::datatable(penguins)"
+    "text": "Explore"
   },
   {
     "objectID": "unpaid-labour.html#download",
     "href": "unpaid-labour.html#download",
     "title": "Case study: Unpaid Labour in Australia",
     "section": "Download",
-    "text": "Download\n Download Data"
+    "text": "Download\n Download Table 3 + 7"
   },
   {
     "objectID": "unpaid-labour.html#contributors",

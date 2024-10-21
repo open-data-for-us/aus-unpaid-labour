@@ -3,9 +3,9 @@ title: "Case study: Unpaid Labour in Australia"
 ---
 
 ```{r, include=FALSE}
-pacman::p_load(DT, palmerpenguins, readr)
+pacman::p_load(DT, readr)
 
-write_csv(penguins, "output/penguins.csv")
+tab3_7 <-read_csv("output/tables_03_07.csv")
 ```
 
 
@@ -27,18 +27,15 @@ We are using data from the [Australian Bureau of Statistics from the 2021 Census
 
 Here we are compiling data that are across several excel spreadsheets and putting them into one tidy, long table format
 
-### Overview of Data
-
-
 ## Explore 
 
-```{r}
-DT::datatable(penguins)
+```{r, echo=FALSE}
+DT::datatable(tab3_7)
 ```
 
 ## Download
 
-{{< downloadthis output/penguins.csv dname="2021-ABS-unpaid-labour.csv" label="Download Data">}}
+{{< downloadthis output/penguins.csv dname="2021-ABS-unpaid-labour-table_03_07.csv" label="Download Table 3 + 7">}}
 
 
 ## Contributors: 
