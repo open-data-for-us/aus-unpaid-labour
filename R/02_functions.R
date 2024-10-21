@@ -5,6 +5,7 @@
 ### Libraries ----
 library(tidyverse)
 library(readxl)
+library(janitor)
 
 
 ### Table 03 ----
@@ -31,12 +32,6 @@ census_table_03 <- function(file_name, table_census, range_census, name_column){
 table_03 <- census_table_03(file_name, table_census, range_census, name_column)
 # trial <- census_table_03(file_name, table_census="Table 3", range_census="A9:G44", name_column = 'relationship')
 
-# table_03_transpose <- table_03 %>%
-#   mutate(`Nil hours` = as.numeric(`Nil hours`)) %>%
-#   pivot_wider(names_from = relationship,
-#               values_from = c(sex,`Nil hours`:Total))
-
-table_03_transpose <- t(table_03) %>%
   
 
 ### Table 07 ----
@@ -89,8 +84,38 @@ table_08 <- census_table_08(file_name, table_census, range_census, name_column)
 # trial <- census_table_03(file_name, table_census="Table 3", range_census="A9:G44
 
 
-### All tables ----
-tables_3_7 <- full_join(table_03, table_07)
+### Join tables ----
 
-tables_7_8 <- full_join(table_07, table_08)
+## Transpose table 3 to join with table 7
+table_03_t <- as.data.frame(t(table_03)) %>%
+  row_to_names(row_number = 1) 
+
+table_03_male <-  table_03 %>% filter(sex %in% c('Males'))
+table_03_male <- as.data.frame(t(table_03_male)) %>%
+  row_to_names(row_number = 1) %>%
+  filter(!`Husband, Wife or Partner` %in% c('Males')) %>%
+  mutate(sex = as.character("Males")) %>%
+  mutate(unpaid_hours = rownames(.))
+
+table_03_female <-  table_03 %>% filter(sex %in% c('Females'))
+table_03_female <- as.data.frame(t(table_03_female)) %>%
+  row_to_names(row_number = 1) %>%
+  filter(!`Husband, Wife or Partner` %in% c('Females')) %>%
+  mutate(sex = as.character("Females")) %>%
+  mutate(unpaid_hours = rownames(.))
+
+rownames(table_03_male) <- NULL
+rownames(table_03_female) <- NULL
+
+table_03_final <- rbind(table_03_female, table_03_male) %>%
+  relocate(unpaid_hours, sex, .before = `Husband, Wife or Partner`)
+
+table_07_final <- table_07 %>% filter(!sex %in% c("Persons"))
+
+table_3_7 <- full_join(table_03_final, table_07_final)
+
+write.csv()
+
+
+
 
