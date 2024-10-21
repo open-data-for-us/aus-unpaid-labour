@@ -114,7 +114,7 @@ table_07_final <- table_07 %>% filter(!sex %in% c("Persons"))
 
 table_3_7 <- full_join(table_03_final, table_07_final)
 
-write.csv()
+write.csv(table_3_7, file = "website/output/tables_03_07.csv")
 
 
 
